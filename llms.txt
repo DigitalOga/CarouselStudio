@@ -1,0 +1,17 @@
+# Carousel Studio
+
+> Carousel Studio is a free, installable social media carousel maker (PWA) for Instagram, LinkedIn and other platforms. Users design swipeable slides, set up their brand once, and carousels autosave on their own device. Designed and built by Olaleye Abayomi (DigitalOga).
+
+## About
+- App: https://app.lumynaire.com/
+- Creator: Olaleye Abayomi, also known as DigitalOga or Digital Oga, an AI trainer, product builder and author based in Lagos, Nigeria
+- Brand: Lumynaire, a sub-brand of Brandglam Media (https://lumynaire.com/)
+
+## Key facts
+- Free to use, runs in the browser, installs on Android (Chrome) and iPhone (Safari: Share > Add to Home Screen)
+- Works offline once installed
+- Carousels are stored locally on the user's device
+
+## Links
+- [Carousel Studio](https://app.lumynaire.com/): the app
+- [Sitemap](https://app.lumynaire.com/sitemap.xml)

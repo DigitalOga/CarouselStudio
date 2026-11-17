@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carousel Studio: Free Social Media Carousel Maker | by Olaleye Abayomi (DigitalOga)</title>
+<meta name="description" content="Carousel Studio is a free carousel maker for Instagram, LinkedIn and more. Design swipeable slides with your own brand, autosave on your device, and install it as an app. Built by Olaleye Abayomi (DigitalOga).">
+<meta name="author" content="Olaleye Abayomi (DigitalOga)">
+<meta name="creator" content="Olaleye Abayomi (DigitalOga)">
+<meta name="application-name" content="Carousel Studio">
+<meta name="keywords" content="carousel maker, Instagram carousel, LinkedIn carousel, carousel creator, social media design, Carousel Studio, DigitalOga, Olaleye Abayomi, Lumynaire">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://app.lumynaire.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Carousel Studio">
+<meta property="og:title" content="Carousel Studio: Free Social Media Carousel Maker">
+<meta property="og:description" content="Design swipeable carousels with your own brand. Autosaves on your device and installs as an app. Built by Olaleye Abayomi (DigitalOga).">
+<meta property="og:url" content="https://app.lumynaire.com/">
+<meta property="og:image" content="https://app.lumynaire.com/icon-512.png">
+<meta property="og:image:alt" content="Carousel Studio app icon">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Carousel Studio: Free Social Media Carousel Maker">
+<meta name="twitter:description" content="Design swipeable carousels with your own brand. Built by Olaleye Abayomi (DigitalOga).">
+<meta name="twitter:image" content="https://app.lumynaire.com/icon-512.png">
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@graph":[
+{"@type":"WebApplication","@id":"https://app.lumynaire.com/#app","name":"Carousel Studio","url":"https://app.lumynaire.com/","description":"A free, installable carousel maker for social media. Design swipeable slides, set up your brand once, and keep your carousels autosaved on your device.","applicationCategory":"DesignApplication","applicationSubCategory":"Social media carousel maker","operatingSystem":"Any (web browser, installable PWA)","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"image":"https://app.lumynaire.com/icon-512.png","creator":{"@id":"https://app.lumynaire.com/#creator"},"author":{"@id":"https://app.lumynaire.com/#creator"},"publisher":{"@id":"https://app.lumynaire.com/#brand"}},
+{"@type":"Person","@id":"https://app.lumynaire.com/#creator","name":"Olaleye Abayomi","alternateName":["DigitalOga","Digital Oga"],"jobTitle":"AI trainer, product builder and author","homeLocation":{"@type":"Place","name":"Lagos, Nigeria"},"worksFor":{"@id":"https://app.lumynaire.com/#brand"}},
+{"@type":"Organization","@id":"https://app.lumynaire.com/#brand","name":"Lumynaire","parentOrganization":{"@type":"Organization","name":"Brandglam Media"},"url":"https://lumynaire.com/","founder":{"@id":"https://app.lumynaire.com/#creator"}},
+{"@type":"WebSite","@id":"https://app.lumynaire.com/#site","url":"https://app.lumynaire.com/","name":"Carousel Studio","publisher":{"@id":"https://app.lumynaire.com/#brand"},"inLanguage":"en"}
+]
+}
+</script>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#5b3df5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Carousels">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@400;700;800&family=DM+Serif+Display&family=Special+Elite&family=Courier+Prime:wght@400;700&family=Oswald:wght@400;600;700&family=Bebas+Neue&family=Space+Grotesk:wght@400;700&family=Anton&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(fonts/inter-400.woff) format('woff')}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/inter-600.woff) format('woff')}
+@font-face{font-family:Inter;font-weight:700;font-display:swap;src:url(fonts/inter-700.woff) format('woff')}
+@font-face{font-family:Inter;font-weight:800;font-display:swap;src:url(fonts/inter-800.woff) format('woff')}
+@font-face{font-family:Poppins;font-weight:400;font-display:swap;src:url(fonts/poppins-400.woff) format('woff')}
+@font-face{font-family:Poppins;font-weight:500 600;font-display:swap;src:url(fonts/poppins-500.woff) format('woff')}
+@font-face{font-family:Poppins;font-weight:700 800;font-display:swap;src:url(fonts/poppins-700.woff) format('woff')}
+@font-face{font-family:Lora;font-weight:400 700;font-display:swap;src:url(fonts/lora.woff) format('woff')}
+:root{--bg:#f5f4f0;--card:#fff;--ink:#1d1d1f;--mut:#6b6b70;--line:#dcdad3;--pri:#5b3df5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17171a;--card:#232328;--ink:#f1f1f3;--mut:#a0a0a8;--line:#38383f;--pri:#8f7bff}}
+:root[data-theme="dark"]{--bg:#17171a;--card:#232328;--ink:#f1f1f3;--mut:#a0a0a8;--line:#38383f;--pri:#8f7bff}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.4 system-ui,-apple-system,Segoe UI,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;max-width:1100px;margin:0 auto}
+h1{font-size:18px;margin:0}
+h3{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:20px 0 8px}
+.dlw{position:relative}
+#dlm{position:absolute;right:0;top:46px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px;display:flex;flex-direction:column;min-width:210px;z-index:5;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+#dlm button{border:0;text-align:left;padding:13px 12px;background:transparent}
+#st{position:fixed;left:12px;right:12px;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:20;background:var(--ink);color:var(--bg);padding:12px 14px;border-radius:12px;font-size:14px;text-align:center}#st:empty{display:none}#ov{position:fixed;top:0;left:0;right:0;bottom:0;z-index:30;background:rgba(0,0,0,.88);overflow:auto;padding:20px;text-align:center;color:#fff}#ov img{max-width:100%;display:block;margin:12px auto;border-radius:8px}
+.app{display:grid;gap:16px;padding:0 16px 32px;max-width:1100px;margin:0 auto}
+@media(min-width:900px){.app{grid-template-columns:1fr 400px;align-items:start}.stage{position:sticky;top:12px}}
+.stage{display:flex;flex-direction:column;align-items:center;gap:10px}
+.nav{display:flex;align-items:center;gap:18px;color:var(--mut)}
+.nav button{width:44px;height:44px;border-radius:50%;font-size:22px;padding:0}
+.ctl{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
+label{display:block;font-size:13px;color:var(--mut);margin-top:12px}
+input,select,textarea{width:100%;margin-top:4px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+textarea{resize:vertical}
+input[type=range]{padding:0}
+input[type=color]{padding:2px;height:42px}
+button,.chip{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 12px;cursor:pointer}
+button.pri{background:var(--pri);color:#fff;border-color:var(--pri);font-weight:700}
+button.danger{color:#d33}
+.seg{display:flex;background:var(--bg);border-radius:12px;padding:3px;gap:3px}
+.seg button{flex:1;border:0;background:transparent;padding:10px 4px;font-size:14px}
+.seg button.on{background:var(--card);box-shadow:0 1px 3px rgba(0,0,0,.25);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chips .on{outline:2px solid var(--pri);outline-offset:2px}
+.num{width:42px;height:42px;padding:0;border-radius:50%}
+.sw{width:38px;height:38px;padding:0;border-radius:50%;border:2px solid var(--line)}
+input.sw{margin:0}
+.th{padding:10px 14px;border-width:2px;font-size:15px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.row>*{flex:1;white-space:nowrap}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tg{display:inline-flex;align-items:center;gap:6px;margin:0;color:var(--ink)}
+.tg input{width:auto;margin:0}
+.hint{font-size:12.5px;color:var(--mut);margin:8px 0 0}
+html{height:100%}
+body{height:100%;display:flex;flex-direction:column;overflow:hidden}
+header{flex:none;width:100%}
+.app{flex:1;min-height:0;width:100%;grid-template-rows:auto minmax(0,1fr);padding-bottom:12px;gap:10px}
+.ctl{display:flex;flex-direction:column;overflow:hidden;min-height:0}
+#sc{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;margin-top:6px;padding-bottom:24px}
+@media(min-width:900px){.app{grid-template-rows:minmax(0,1fr);align-items:stretch;gap:16px}.stage{position:static;justify-content:center}}
+#bar{flex:none;display:flex;align-items:center;gap:8px;padding:8px 0 calc(4px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);margin-top:6px}
+#tabs{display:flex;flex:1;gap:2px}
+#tabs button{flex:1;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 2px;font-size:12px;color:var(--mut);border-radius:10px}
+#tabs button.on{color:var(--pri);font-weight:700}
+#bar .dlw{flex:none}#bar .pri{padding:13px 18px;border-radius:14px}
+#dlm{top:auto;bottom:58px}
+#chips,#themes{flex-wrap:nowrap;overflow-x:auto;padding:4px 2px 8px}
+#themes button{flex:none}
+.th2{flex:none;position:relative;overflow:hidden;padding:0;border:2px solid var(--line);border-radius:8px;background:none}
+.th2.on{border-color:var(--pri)}
+.th2 i{position:absolute;left:3px;bottom:3px;background:rgba(0,0,0,.65);color:#fff;font:700 10px system-ui;padding:1px 5px;border-radius:8px}
+.th2.add{display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--mut)}
+.hd{display:flex;justify-content:space-between;align-items:center;position:relative}
+#more{width:42px;height:38px;padding:0;font-size:20px}
+#mm{position:absolute;right:0;top:44px;z-index:6;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px;display:flex;flex-direction:column;min-width:200px;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+#mm button{border:0;background:transparent;text-align:left;padding:12px}
+details>summary{padding:12px 0;font-weight:700;cursor:pointer}
+#szb{padding:8px 14px;border-radius:20px;font-size:13px}
+.seg button svg{display:block;margin:0 auto}
+.seg.sm button{padding:8px 4px;font-size:13px}
+.tpl{display:block;width:100%;text-align:left;margin:8px 0;padding:14px;background:var(--card);color:var(--ink);border-radius:12px}
+.tpl small{display:block;color:var(--mut);margin-top:2px}
+#ov h3{color:#fff}
+.th2{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.th2.drag{z-index:5;opacity:.85;box-shadow:0 6px 18px rgba(0,0,0,.4);transition:none}
+.th2.overL{box-shadow:-5px 0 0 var(--pri)}.th2.overR{box-shadow:5px 0 0 var(--pri)}.th2.overT{box-shadow:0 -5px 0 var(--pri)}.th2.overB{box-shadow:0 5px 0 var(--pri)}
+button:disabled{opacity:.35;cursor:default}
+#onb{position:fixed;top:0;left:0;right:0;bottom:0;z-index:60;background:var(--bg);overflow:auto}
+.ob{max-width:520px;margin:0 auto;padding:28px 20px calc(36px + env(safe-area-inset-bottom,0px))}
+.ob h2{margin:0 0 4px;font-size:24px}
+#ob-t{flex-wrap:wrap!important;overflow:visible!important}
+.lrow{display:flex;gap:6px;align-items:stretch}.lrow .tpl{flex:1;margin:6px 0}.lrow button.s{padding:0 12px;margin:6px 0;background:var(--card);color:var(--ink);border-radius:12px;font-size:13px}
+.lrow .dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:8px;vertical-align:-1px;border:1px solid rgba(128,128,128,.5)}
+#cw1,#cw2{color:#d9822b;font-size:12.5px;margin:8px 0 0}
+#splash{position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;background:radial-gradient(circle at 50% 38%,#7b5cff 0%,#3a22b8 48%,#140b4d 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;transition:opacity .55s;text-align:center;padding:24px;overflow:hidden}
+#splash.out{opacity:0;pointer-events:none}
+#splash:before,#splash:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.06);animation:drift 7s ease-in-out infinite}
+#splash:before{left:-140px;top:-120px}#splash:after{right:-160px;bottom:-140px;animation-delay:-3s}
+@keyframes drift{50%{transform:translate(30px,24px) scale(1.12)}}
+.pl{position:relative;width:112px;height:112px;margin-bottom:30px}
+.pl img{position:relative;width:112px;height:112px;border-radius:28px;box-shadow:0 10px 40px rgba(0,0,0,.4);animation:pulse 1.3s ease-in-out infinite}
+.pl i{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:28px;border:2px solid rgba(255,255,255,.7);animation:ring 1.3s ease-out infinite}
+.pl i:nth-child(2){animation-delay:.65s}
+@keyframes pulse{50%{transform:scale(1.09)}}
+@keyframes ring{from{transform:scale(1);opacity:.85}to{transform:scale(1.9);opacity:0}}
+#sl-t{font:800 36px/1.1 Poppins,Inter,system-ui,sans-serif;letter-spacing:.5px;min-height:42px;position:relative}
+#sl-t b{color:#ffd166}
+#sl-t u{display:inline-block;width:3px;height:34px;background:#fff;margin-left:4px;vertical-align:-5px;text-decoration:none;animation:blink .7s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+#sl-by{margin-top:16px;font:600 15px Poppins,Inter,system-ui,sans-serif;letter-spacing:2px;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:all .6s;position:relative}
+#sl-by b{color:#ffd166;animation:glow 1.6s ease-in-out infinite}
+@keyframes glow{50%{text-shadow:0 0 14px rgba(255,209,102,.9)}}
+#sl-by.on{opacity:.95;transform:none}
+@media(prefers-reduced-motion:reduce){.pl img,.pl i,#splash:before,#splash:after,#sl-by b{animation:none}}
+#ip{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;max-width:460px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.35);padding:14px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;animation:up .45s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes up{from{transform:translateY(140%);opacity:0}}
+#ip img{width:48px;height:48px;border-radius:12px}
+#ip .tx{flex:1;min-width:160px;line-height:1.3}#ip .tx span{display:block;font-size:13px;color:var(--mut)}
+#ip .ipb{display:flex;gap:8px;width:100%}#ip .ipb button{flex:1;padding:12px}
+#hdb button{height:38px}#undo,#redo{width:42px;padding:0;font-size:20px}
+header{padding:8px 12px;gap:8px;position:relative;z-index:6}
+.pjb{display:flex;align-items:center;gap:10px;border:0;background:transparent;padding:4px 8px 4px 0;text-align:left;min-width:0;flex:1}
+.pjb img{width:34px;height:34px;border-radius:9px;flex:none}
+.pjb .t{display:flex;flex-direction:column;min-width:0}
+.pjb b{font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:56vw}
+.pjb small{font-size:11.5px;color:var(--mut);white-space:nowrap}
+#hdb{position:relative;display:flex;gap:6px;flex:none}
+#hdb button{width:42px;height:40px;padding:0;font-size:20px}
+#hm{position:absolute;right:0;top:46px;z-index:7;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px;display:flex;flex-direction:column;min-width:200px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+#hm button{width:auto;height:auto;border:0;background:transparent;text-align:left;padding:13px 12px;font-size:15px}
+#dlm{min-width:250px}#dlm button{padding:11px 12px}#dlm small{display:block;color:var(--mut);font-size:12px;margin-top:2px;font-weight:400}
+#grab{flex:none;height:22px;touch-action:none;cursor:grab;position:relative;display:none}
+#grab i{position:absolute;left:50%;top:9px;width:44px;height:5px;margin-left:-22px;border-radius:3px;background:var(--line)}
+.tools{margin:10px 0 4px;flex-wrap:nowrap;overflow-x:auto}
+.tools button{flex:none;padding:9px 18px;border-radius:20px}
+.tools button.on{background:var(--pri);color:#fff;border-color:var(--pri);font-weight:700;outline:0}
+.tpanel{background:var(--bg);border-radius:12px;padding:2px 12px 12px;margin:6px 0 10px}
+.tpanel h3{margin:12px 0 6px}
+label,h3{position:relative}
+.rv{position:absolute;right:0;top:0;font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums;text-transform:none;letter-spacing:0}
+.th.on::after{content:" \2713"}
+.hint{font-size:13.5px}
+@media(max-width:899px){
+.app{display:flex;flex-direction:column;padding:0;gap:0;max-width:none;width:100%}
+.stage{flex:1;min-height:0;justify-content:center;padding:0 16px 6px;gap:8px;position:relative;overflow:hidden}
+.ctl{flex:none;height:var(--sh,46vh);border-radius:22px 22px 0 0;border-width:1px 0 0;padding:0 14px;transition:height .26s cubic-bezier(.2,.8,.2,1);box-shadow:0 -6px 24px rgba(0,0,0,.12)}
+.ctl.drag{transition:none}
+#grab{display:block}
+.ctl[data-s="0"] #sc{display:none}
+#bar{border-top:0;margin-top:0}
+}
+:focus-visible{outline:2px solid var(--pri);outline-offset:2px}
+@media(hover:hover){button:not(:disabled):hover{border-color:var(--pri)}button.pri:hover{filter:brightness(1.08)}}
+@media(min-width:900px){
+header{max-width:none;margin:0;padding:10px 20px;background:var(--card);border-bottom:1px solid var(--line)}
+.pjb b{max-width:40vw;font-size:17px}
+#hdb{gap:8px;align-items:center}
+#hdb #dlb{width:auto;height:40px;padding:0 22px;font-size:15px}
+#hdb .dlw{position:relative}
+#hdb #dlm{top:48px;bottom:auto;right:0;left:auto}
+#hdb #dlm button{width:auto;height:auto;font-size:15px;text-align:left}
+.app{display:grid;grid-template-columns:168px minmax(0,1fr) 420px;grid-template-rows:minmax(0,1fr);gap:0;padding:0;max-width:none;margin:0;width:100%}
+#rail{display:flex;flex-direction:column;min-height:0;border-right:1px solid var(--line);background:var(--card)}
+#rail::before{content:"SLIDES";font-size:11.5px;letter-spacing:.08em;font-weight:700;color:var(--mut);padding:16px 18px 6px}
+#rail #chipw{flex:1;min-height:0;display:flex;flex-direction:column}
+#rail .hint{display:none}
+#rail #chips{flex-direction:column;flex-wrap:nowrap;overflow-y:auto;overflow-x:hidden;align-items:center;padding:6px 10px 24px;gap:14px;flex:1;min-height:0}
+#rail .th2{flex:none}
+#rail .th2.add{height:52px!important}
+#themes{flex-wrap:wrap;overflow:visible}
+.stage{position:relative;justify-content:center;padding:20px 32px 16px;gap:14px;background-color:var(--bg);background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:22px 22px;overflow:hidden}
+#pv>div{box-shadow:0 10px 40px rgba(0,0,0,.25)!important;border-radius:6px!important}
+.ctl{border-radius:0;border:0;border-left:1px solid var(--line);background:var(--card);padding:0 22px;height:auto}
+#bar{order:-1;border-top:0;border-bottom:1px solid var(--line);margin:0 0 4px;padding:10px 0 6px}
+#tabs button{font-size:13px;flex-direction:row;justify-content:center;gap:8px;padding:10px 6px}
+#sc{padding-bottom:40px}
+#more{background:var(--bg)}
+.nav{gap:14px}
+}
+@media(min-width:1500px){.app{grid-template-columns:190px minmax(0,1fr) 460px}}
+</style>
+</head>
+<body>
+<div id="splash" aria-label="Carousel Studio"><div class="pl"><i></i><i></i><img src="icon-192.png" alt=""></div><div id="sl-t"><u></u></div><div id="sl-by">designed by <b>DigitalOga</b></div></div>
+<div id="seo-text" style="position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">
+<h1>Carousel Studio: free social media carousel maker</h1>
+<p>Carousel Studio is a free, installable carousel maker for Instagram, LinkedIn and other social platforms. Create swipeable slides, set up your brand colours and fonts once, and your carousels autosave on your device. It works in the browser and installs as an app on Android and iPhone.</p>
+<p>Carousel Studio was designed and built by Olaleye Abayomi, also known as DigitalOga, an AI trainer, product builder and author based in Lagos, Nigeria, under Lumynaire and Brandglam Media.</p>
+</div>
+<script>
+(function(){var sp=document.getElementById('splash'),t=document.getElementById('sl-t'),by=document.getElementById('sl-by'),full='Carousel Studio',n=0,done=0;
+function fin(){if(done)return;done=1;sp.classList.add('out');try{sessionStorage.setItem('cs-splash','1');localStorage.setItem('cs-seen','1')}catch(e){}setTimeout(function(){sp.remove();window.dispatchEvent(new Event('splash-done'))},600)}
+try{if(sessionStorage.getItem('cs-splash')){sp.remove();setTimeout(function(){window.dispatchEvent(new Event('splash-done'))},0);return}}catch(e){}
+sp.onclick=fin;
+function draw(){t.innerHTML=(n>8?'Carousel <b>'+full.slice(9,n)+'</b>':full.slice(0,n))+'<u></u>'}
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){n=full.length;draw();by.classList.add('on');setTimeout(fin,1200);return}
+var seen=0;try{seen=localStorage.getItem('cs-seen')}catch(e){}
+var iv=setInterval(function(){n++;draw();if(n>=full.length){clearInterval(iv);setTimeout(function(){by.classList.add('on')},seen?80:250);setTimeout(fin,seen?700:2000)}},seen?32:85)})();
+</script>
+<header><button id="pj" class="pjb" aria-label="My carousels"><img src="icon-192.png" alt=""><span class="t"><b id="pjn">Untitled carousel</b><small><span id="sv">Saved</span> · All carousels ▾</small></span></button>
+<div id="hdb"><button id="undo" aria-label="Undo" title="Undo" disabled>&#8630;</button><button id="redo" aria-label="Redo" title="Redo" disabled>&#8631;</button><button id="hmb" aria-label="Menu">⋯</button>
+<div id="hm" hidden><button id="new">New carousel</button><button id="tpl">Starters…</button><button id="bset">Brand setup…</button><button id="inst">Install app</button><div class="by-credit" style="border-top:1px solid var(--line);margin-top:4px;padding:10px 12px 6px;font-size:12.5px;color:var(--mut);line-height:1.4">Built by <b style="color:var(--ink)">Olaleye Abayomi</b><br>(DigitalOga) &middot; <a href="https://lumynaire.com/portfolio.html" target="_blank" rel="noopener" style="color:var(--pri)">Lumynaire</a></div></div></div></header>
+<div id="st"></div>
+<div id="ip" hidden><img src="icon-192.png" alt=""><div class="tx"><b>Install Carousel Studio</b><span id="ipd">Add it to your home screen for quick, offline access.</span></div><div class="ipb"><button class="pri" id="ipi">Install</button><button id="ipn">Not now</button></div></div>
+<main class="app">
+<aside id="rail"></aside>
+<section class="stage"><div id="pv"></div><div class="nav"><button id="prev" aria-label="Previous">‹</button><span id="pos"></span><button id="next" aria-label="Next">›</button><button id="szb" title="Change size">4:5 ▾</button></div></section>
+<section class="ctl" data-s="1">
+<div id="grab" aria-label="Drag to resize the panel" role="button"><i></i></div>
+<div id="sc">
+<div id="t0">
+<div class="hd"><h3 style="margin:0">Slides</h3><button id="more" aria-label="Slide actions">⋯</button><div id="mm" hidden><button id="ml">Move earlier</button><button id="mr">Move later</button><button id="dup">Duplicate slide</button><button id="del" class="danger">Delete slide</button></div></div><div id="chipw"><div class="chips" id="chips"></div><p class="hint" style="margin:0 0 4px">Tap text on the slide to edit it there. Hold and drag a thumbnail to reorder.</p></div>
+<label>Small label on top<input id="f-label"></label>
+<label>Title<textarea rows="2" id="f-title"></textarea></label>
+<label>Text<textarea rows="4" id="f-body"></textarea></label>
+<div class="seg sm" id="rt" style="margin-top:8px"><button data-m="**" aria-label="Bold"><b>B</b></button><button data-m="__" aria-label="Italic"><i>I</i></button><button data-m="*" aria-label="Highlight" style="color:var(--pri);font-weight:700">Highlight</button></div>
+<div class="chips tools" id="tools"><button data-p="sp-align">Align</button><button data-p="sp-size">Size</button><button data-p="sp-photo">Photo</button><button data-p="ctaed" id="tc-cta" hidden>Follow card</button></div>
+<div class="tpanel" id="sp-align" hidden>
+<h3>Align text</h3>
+<div class="seg" id="al"><button data-v="left" aria-label="Align left"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h10M4 18h14"/></svg></button><button data-v="center" aria-label="Align center"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M7 12h10M5 18h14"/></svg></button><button data-v="right" aria-label="Align right"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M10 12h10M6 18h14"/></svg></button></div>
+<div class="seg sm" id="va" style="margin-top:8px"><button data-v="top">Top</button><button data-v="middle">Middle</button><button data-v="bottom">Bottom</button></div>
+<label class="tg" style="margin-top:10px"><input type="checkbox" id="al1">Horizontal alignment: this slide only</label>
+</div>
+<div class="tpanel" id="sp-size" hidden>
+<h3>Text size for this slide</h3><input type="range" id="szs" min="0.6" max="1.6" step="0.05" value="1">
+<p class="hint">This slide only. The size for the whole carousel is in Style, under More.</p>
+</div>
+<div class="tpanel" id="sp-photo" hidden>
+<h3>Photo for this slide</h3>
+<div class="row" style="margin-top:0"><label class="chip" style="margin:0;text-align:center"><span id="spt">Add photo</span><input type="file" accept="image/*" id="spf" hidden></label><button id="spx" class="danger" hidden>Remove</button><button id="spa" hidden>Use on all</button></div>
+<div id="sprow" hidden><label>Photo transparency<input type="range" data-k="imgT" min="0" max="0.95" step="0.05"></label><label>Darken photo<input type="range" data-k="dim" min="0" max="0.9" step="0.05"></label></div>
+<p id="cw1" hidden></p>
+<p class="hint">This photo replaces the background on this slide only.</p>
+</div>
+<div class="tpanel" id="ctaed" hidden>
+<h3>Follow card (last slide)</h3>
+<label class="tg" style="margin-top:0"><input type="checkbox" data-k="ctaOn">Show follow card</label>
+<div class="seg sm" id="cl" style="margin-top:8px"><button data-v="row">Side by side</button><button data-v="stack">Stacked</button></div>
+<div class="two"><label>Button text<input data-k="ctaBtn" placeholder="FOLLOW"></label><label>Picture shape<select data-k="avShape"><option value="circle">Circle</option><option value="round">Rounded</option><option value="square">Square</option></select></label></div>
+<label>Message<input data-k="ctaText"></label>
+<div class="row"><label class="chip" style="margin:0;text-align:center">Profile picture<input type="file" accept="image/*" id="avf" hidden></label><button id="avx" class="danger">Remove</button></div>
+<p class="hint">Leave button text empty to hide the button. Your handle comes from the Brand tab.</p>
+</div>
+</div>
+<div id="t1" hidden>
+<h3>Styles</h3><div class="chips" id="themes"></div>
+<h3>Layout</h3><div class="seg" id="lay"></div>
+<h3>Background</h3><div class="chips" id="bgs"><input type="color" class="sw" data-k="bg" title="Plain color"></div>
+<p class="hint">Plain color, gradients, or your own photo for every slide.</p>
+<div id="dimrow" hidden><label>Photo transparency<input type="range" data-k="imgT" min="0" max="0.95" step="0.05"></label>
+<label>Darken photo<input type="range" data-k="dim" min="0" max="0.9" step="0.05"></label>
+<p id="cw2" hidden></p><p class="hint">Transparent photos fade into the plain color swatch above.</p>
+<div class="row"><label class="chip" style="margin:0;text-align:center">Change photo<input type="file" accept="image/*" id="phf" hidden></label><button id="phx" class="danger">Remove photo</button></div></div>
+<details id="cz"><summary>More</summary>
+<h3>Text size (all slides)</h3><input type="range" data-k="scale" min="0.6" max="1.5" step="0.05">
+<h3>Margins</h3><input type="range" data-k="pad" min="40" max="170" step="5">
+<label class="tg" style="margin-top:14px"><input type="checkbox" data-k="autofit">Shrink long text so it always fits</label>
+</details>
+</div>
+<div id="t2" hidden>
+<h3>Handle</h3><div class="two"><label style="margin:0">Handle<input data-k="handle"></label><label style="margin:0">Name (optional)<input data-k="name"></label></div>
+<h3>Logo</h3>
+<div class="row" style="margin-top:0"><label class="chip" style="margin:0;text-align:center">Upload logo<input type="file" accept="image/*" id="lgf" hidden></label><button id="lgx" class="danger">Remove</button></div>
+<div id="lgc" hidden>
+<label>Shape</label><div class="seg sm" id="lgs"><button data-v="circle">Circle</button><button data-v="round">Rounded</button><button data-v="square">Square</button><button data-v="orig">Original</button></div>
+<label>Size<input type="range" data-k="logoSize" min="60" max="320" step="10"></label>
+<div class="two"><label>Border width<input type="range" data-k="logoBw" min="0" max="24" step="1"></label><label>Border color<input type="color" data-k="logoBc"></label></div>
+<div class="two"><label>Position<select data-k="logoPos"><option value="tl">Top left</option><option value="tr">Top right</option><option value="bl">Bottom left (by handle)</option></select></label><label>Show on<select data-k="logoShow"><option value="all">All slides</option><option value="first">First slide</option><option value="last">Last slide</option></select></label></div>
+<p class="hint">Original keeps the logo's own shape and transparency, with no border.</p>
+</div>
+<h3>Footer on every slide</h3>
+<label style="margin:0">Swipe text<input data-k="swipe"></label>
+<div class="row" style="gap:14px"><label class="tg"><input type="checkbox" data-k="showHandle">Handle</label><label class="tg"><input type="checkbox" data-k="dots">Dots</label><label class="tg"><input type="checkbox" data-k="count">1/4</label></div>
+<h3>Colors &amp; fonts</h3>
+<div class="two"><label style="margin:0">Text color<input type="color" data-k="text"></label><label style="margin:0">Accent color<input type="color" data-k="accent"></label></div>
+<div class="two"><label>Heading font<select data-k="hf"></select></label><label>Body font<select data-k="bf"></select></label></div>
+<h3>Saved brands</h3>
+<select id="bl"><option value="">Load a saved brand…</option></select>
+<div class="row" style="margin-top:8px"><input id="bn" placeholder="Name this brand" style="margin:0"><button id="bs" style="flex:none">Save</button></div>
+</div>
+</div><nav id="bar"><div id="tabs"></div><div class="dlw" id="dlw"><button class="pri" id="dlb">Download ▴</button><div id="dlm" hidden>
+<button id="dpdf"><b>LinkedIn · PDF</b><small>All slides in one carousel file</small></button>
+<button id="dimg"><b>Instagram · Images</b><small>All slides, ready to post</small></button>
+<button id="d1"><b>This slide · PNG</b><small>Just the slide you are viewing</small></button>
+<button id="dall"><b>Everything · ZIP</b><small>All slides as PNG files</small></button></div></div></nav></section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const FONTS={'Inter':800,'Poppins':700,'Montserrat':800,'Playfair Display':800,'Oswald':600,'Lora':600,'DM Serif Display':400,'Special Elite':400,'Courier Prime':700,'Bebas Neue':400,'Space Grotesk':700,'Anton':400,'Caveat':700};
+const THEMES={
+Dark:{layout:'bold',align:'left',bg:'#1f2326',text:'#ffffff',accent:'#f0b93a',hf:'Inter',bf:'Inter',mode:'color'},
+Paper:{layout:'type',align:'left',bg:'#ecebe7',text:'#1c1c1c',accent:'#c0392b',hf:'Special Elite',bf:'Special Elite',mode:'grad',g:0},
+Emerald:{layout:'bold',align:'center',bg:'#0f3d33',text:'#f4ecd8',accent:'#e0c068',hf:'Playfair Display',bf:'Lora',mode:'color'},
+Editorial:{layout:'bold',align:'left',bg:'#f6f3ee',text:'#2b2b2b',accent:'#3b6fd4',hf:'DM Serif Display',bf:'Lora',mode:'color'},
+Purple:{layout:'bold',align:'left',bg:'#35184f',text:'#ffffff',accent:'#f2c94c',hf:'Poppins',bf:'Poppins',mode:'color'},
+Ocean:{layout:'bold',align:'left',bg:'#00c6ff',text:'#ffffff',accent:'#ffd166',hf:'Montserrat',bf:'Inter',mode:'grad',g:6},
+Blush:{layout:'minimal',align:'center',bg:'#fbd3e9',text:'#4a1d3a',accent:'#c2185b',hf:'Playfair Display',bf:'Lora',mode:'grad',g:7},
+Forest:{layout:'bar',align:'left',bg:'#134e5e',text:'#ffffff',accent:'#f9e79f',hf:'Poppins',bf:'Poppins',mode:'grad',g:8},
+Peach:{layout:'quote',align:'left',bg:'#ffecd2',text:'#3a2a20',accent:'#d9480f',hf:'DM Serif Display',bf:'Lora',mode:'grad',g:9},
+Aurora:{layout:'bold',align:'left',bg:'#7f00ff',text:'#ffffff',accent:'#ffe66d',hf:'Space Grotesk',bf:'Space Grotesk',mode:'grad',g:10},
+Brutal:{layout:'bold',align:'left',bg:'#ffe14d',text:'#111111',accent:'#e5322d',hf:'Anton',bf:'Space Grotesk',mode:'color'},
+Terminal:{layout:'type',align:'left',bg:'#0d1117',text:'#d7e0ea',accent:'#39ff14',hf:'Courier Prime',bf:'Courier Prime',mode:'color'},
+Cream:{layout:'quote',align:'center',bg:'#faf3e0',text:'#2d2a26',accent:'#b5651d',hf:'Playfair Display',bf:'Lora',mode:'color'},
+Navy:{layout:'bar',align:'left',bg:'#0b1f3a',text:'#ffffff',accent:'#4cc9f0',hf:'Montserrat',bf:'Inter',mode:'color'},
+Handwritten:{layout:'minimal',align:'left',bg:'#fffdf5',text:'#222222',accent:'#e4572e',hf:'Caveat',bf:'Caveat',mode:'color'},
+Coral:{layout:'bold',align:'right',bg:'#ff6b6b',text:'#ffffff',accent:'#fff3b0',hf:'Poppins',bf:'Inter',mode:'color'}};
+const GRADS=[
+{n:'Paper',css:'radial-gradient(ellipse at 30% 20%,#f4f3ef,#e2e0d9)',text:'#1c1c1c'},
+{n:'Midnight',css:'linear-gradient(160deg,#0f2027,#203a43,#2c5364)',text:'#ffffff'},
+{n:'Sunset',css:'linear-gradient(160deg,#ff9966,#ff5e62)',text:'#ffffff'},
+{n:'Violet',css:'linear-gradient(160deg,#41295a,#2f0743)',text:'#ffffff'},
+{n:'Mint',css:'linear-gradient(160deg,#d4fc79,#96e6a1)',text:'#12331f'},
+{n:'Charcoal',css:'linear-gradient(160deg,#2b2f33,#14171a)',text:'#ffffff'},
+{n:'Ocean',css:'linear-gradient(160deg,#00c6ff,#0072ff)',text:'#ffffff'},
+{n:'Blush',css:'linear-gradient(160deg,#fbd3e9,#f5a6cb)',text:'#4a1d3a'},
+{n:'Forest',css:'linear-gradient(160deg,#134e5e,#2f7a5e)',text:'#ffffff'},
+{n:'Peach',css:'linear-gradient(160deg,#ffecd2,#fcb69f)',text:'#3a2a20'},
+{n:'Aurora',css:'linear-gradient(160deg,#7f00ff,#e100ff)',text:'#ffffff'}];
+const SIZES=[['Square 1080×1080',1080,1080],['Portrait 1080×1350',1080,1350],['Story 1080×1920',1080,1920]];
+const S=Object.assign({w:1080,h:1350,scale:1,img:null,dim:.45,imgT:0,pad:90,valign:'middle',logo:null,logoShape:'circle',logoSize:150,logoPos:'tl',logoBw:6,logoBc:'#ffffff',logoShow:'all',autofit:true,themeName:'Dark',pname:'',avatar:null,avShape:'circle',ctaBtn:'FOLLOW',ctaLay:'row',g:0,handle:'@YourHandle',name:'',swipe:'Swipe for more',ctaOn:true,ctaText:'for daily mindset shifts & inspiration.',dots:true,count:true,showHandle:true,
+slides:[
+{label:'Freedom & Mindset',title:'The Invisible Trap Keeping You Stuck.',body:'A perpetual state of *helplessness and stagnation* begins with a single thought.'},
+{label:'The Cycle',title:'',body:'One powerful way to keep a free person stuck is to make them doubt their own freedom. They then spend their time and energy *fighting perceived bondage* instead of using the privileges of their liberty.'},
+{label:'The Pivot',title:'',body:'Stop fighting battles that exist only in your mind. Your effort is constrained only by *what you believe is possible*. Think abundance. Act like it.'},
+{label:'',title:'Start Acting Like You Are *Free* Today.',body:'Save this post to remind yourself when doubt creeps in. Share with someone who needs to hear this.'}]},THEMES.Dark);
+const S0=JSON.parse(JSON.stringify(S));
+const esc=s=>String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const fmt=s=>esc(s).replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/__([^_]+)__/g,'<i>$1</i>').replace(/\*([^*]+)\*/g,(m,a)=>`<b style="color:${S.accent}">${a}</b>`).replace(/\n/g,'<br>');
+const ink=h=>{const n=parseInt(h.slice(1),16),r=n>>16,g=n>>8&255,b=n&255;return (.299*r+.587*g+.114*b)>150?'#111111':'#ffffff'};
+function bgCss(){if(S.mode==='grad')return 'background:'+GRADS[S.g].css;if(S.mode==='img'&&S.img)return 'background:'+S.bg;return 'background:'+S.bg}
+function picBox(src,z,sh,bw,bc,df){
+const orig=sh==='orig',rad=sh==='circle'?'50%':sh==='round'?Math.round(z*.22)+'px':'0',bd=(!orig&&bw>0)?`border:${bw}px solid ${bc};`:'';
+return `<div data-f="${df}" style="flex:none;width:${z}px;height:${z}px;box-sizing:border-box;border-radius:${rad};${bd}background:url(${src}) center/${orig?'contain':'cover'} no-repeat"></div>`}
+function logoBox(i,n){
+if(!S.logo||(S.logoShow==='first'&&i!==0)||(S.logoShow==='last'&&i!==n-1))return '';
+return picBox(S.logo,S.logoSize,S.logoShape,S.logoBw,S.logoBc,'logo')}
+function ctaHtml(lone){
+const c=S.accent,stack=S.ctaLay==='stack',av=S.avatar?picBox(S.avatar,stack?220:130,S.avShape,8,c,'cta'):'',
+btn=S.ctaBtn?`<div data-f="cta" style="background:${c};color:${ink(c)};font-weight:800;font-family:'${S.hf}';font-size:40px;padding:16px 34px;border-radius:16px;white-space:nowrap">${esc(S.ctaBtn)}</div>`:'';
+if(stack)return `<div data-f="cta" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;margin-top:${lone?0:50}px;align-self:center">${av}<div style="font-size:46px;font-weight:800">${esc(S.handle)}</div><div style="font-size:32px;line-height:1.3;max-width:760px">${esc(S.ctaText)}</div>${btn}</div>`;
+return `<div data-f="cta" style="display:flex;align-items:center;gap:28px;${lone?'align-self:center;':''}">${av}${btn}<div style="font-size:32px;line-height:1.3;text-align:left"><b>${esc(S.handle)}</b><br>${esc(S.ctaText)}</div></div>`}
+const FITC=new Map();let _ms;
+function measurer(){if(!_ms){_ms=document.createElement('div');_ms.style.cssText='position:fixed;left:-20000px;top:0;visibility:hidden;pointer-events:none';document.body.appendChild(_ms)}return _ms}
+function fitKey(i){const s=S.slides[i];return JSON.stringify([i===S.slides.length-1,s.label,s.title,s.body,s.sz,s.align,s.img?1:0,S.scale,S.pad,S.w,S.h,S.layout,S.hf,S.bf,S.valign,S.align,S.logo?[S.logoSize,S.logoPos,S.logoShow,S.logoShape,S.logoBw]:0,S.ctaOn,S.ctaLay,S.ctaBtn,S.ctaText,S.avatar?1:0,S.swipe,S.dots,S.count,S.showHandle,S.handle,S.name])}
+function slideEl(i){if(!S.autofit)return buildSlide(i,1);const key=fitKey(i);let f=FITC.get(key);
+if(f===undefined){f=1;const h=measurer();for(let n=0;n<12;n++){const el=buildSlide(i,f);h.appendChild(el);const inner=el.lastElementChild,over=inner.scrollHeight>inner.clientHeight+2;h.removeChild(el);if(!over||f<.45)break;f*=.93}
+if(FITC.size>300)FITC.clear();FITC.set(key,f)}return buildSlide(i,f)}
+function buildSlide(i,f){
+const s=S.slides[i],n=S.slides.length,last=i===n-1,k=S.scale*(s.sz||1)*(f||1),L=S.layout,c=S.accent,hw=FONTS[S.hf]||700;
+const al=s.align||S.align||'left',va=S.valign||'middle',P=S.pad,
+ai={left:'flex-start',center:'center',right:'flex-end'}[al]||'flex-start',
+jc={top:'flex-start',middle:'center',bottom:'flex-end'}[va]||'center';
+const el=document.createElement('div');
+el.style.cssText=`position:relative;overflow:hidden;width:${S.w}px;height:${S.h}px;color:${S.text};font-family:'${S.bf}',sans-serif;${bgCss()}`;
+const op=1-(S.imgT||0);
+const pic=s.img||((S.mode==='img'&&S.img)?S.img:null);
+const ov=pic?`<div style="position:absolute;top:0;left:0;right:0;bottom:0;background:url(${pic}) center/cover no-repeat;opacity:${op}"></div><div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,${(S.dim*op).toFixed(3)})"></div>`:'';
+const lg=logoBox(i,n);
+const lab=`<div data-f="label" style="flex:1;font-family:'${S.hf}';font-weight:${hw};font-size:${30*k}px;letter-spacing:3px;text-transform:uppercase;color:${c};min-height:36px">${esc(s.label)}</div>`;
+const tsz={type:62,minimal:72,quote:76}[L]||92,bsz={type:54,minimal:42,quote:50}[L]||46;
+const title=s.title?`<div data-f="title" style="font-family:'${S.hf}';font-weight:${hw};font-size:${tsz*k}px;line-height:1.1;margin-bottom:34px;${L==='quote'?'font-style:italic;':''}">${fmt(s.title)}</div>`:'';
+const body=s.body?`<div data-f="body" style="font-size:${bsz*k}px;line-height:${L==='type'?1.5:1.4}">${fmt(s.body)}</div>`:'';
+let r1='';
+const lone=last&&!s.title&&!s.body,stackCta=last&&S.ctaOn&&(S.ctaLay==='stack'||lone);
+if(last){if(S.ctaOn&&!stackCta)r1=ctaHtml()}
+else if(S.swipe)r1=`<div style="display:inline-flex;align-items:center;gap:14px;font-size:30px;font-weight:600;letter-spacing:.5px;padding:12px 30px;border:2px solid ${c};border-radius:60px">${esc(S.swipe)} <span style="color:${c};font-size:36px;line-height:1">→</span></div>`;
+let d='';for(let j=0;j<n;j++)d+=`<span style="display:inline-block;width:16px;height:16px;border-radius:8px;margin:0 6px;background:${j===i?c:'currentColor'};opacity:${j===i?1:.3}"></span>`;
+const who=(S.showHandle&&!(last&&S.ctaOn))?esc((S.name?S.name+'  ':'')+S.handle):'';
+const r2=`<div style="display:flex;justify-content:space-between;align-items:center;font-size:30px;margin-top:34px;opacity:.85"><div style="flex:1;display:flex;align-items:center;gap:18px;text-align:left">${S.logoPos==='bl'?lg:''}<span>${who}</span></div><div>${S.dots?d:''}</div><div style="flex:1;text-align:right">${S.count?(i+1)+'/'+n:''}</div></div>`;
+let mid=title+(L==='minimal'&&s.title&&s.body?`<div style="width:100px;height:6px;border-radius:3px;background:${c};margin-bottom:34px"></div>`:'')+body;
+if(L==='quote')mid=`<div style="font-family:'${S.hf}';font-size:300px;line-height:.75;height:150px;color:${c};margin-bottom:10px">&ldquo;</div>`+mid;
+if(L==='bar'){const sd=al==='right'?'right':'left';mid=`<div style="border-${sd}:14px solid ${c};padding-${sd}:44px;display:flex;flex-direction:column;align-items:${ai}">${mid}</div>`}
+if(stackCta)mid+=ctaHtml(lone);
+const top=`<div style="display:flex;align-items:center;gap:28px">${S.logoPos==='tl'?lg:''}${lab}${S.logoPos==='tr'?lg:''}</div>`;
+el.innerHTML=ov+`<div style="position:relative;box-sizing:border-box;height:100%;padding:${P}px;display:flex;flex-direction:column;text-align:${al}">${top}<div style="flex:1;display:flex;flex-direction:column;justify-content:${jc};align-items:${ai}">${mid}</div><div style="display:flex;justify-content:${ai};margin-top:${r1?44:0}px">${r1}</div>${r2}</div>`;
+return el}
+
+let cur=0,pT;function persist(){clearTimeout(pT);$('sv').textContent='Saving…';pT=setTimeout(()=>{Promise.resolve(saveProj()).then(()=>{$('sv').textContent='Saved'});histPush()},500)}
+let PID=null,ready=false,fresh=false;
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6),clone=o=>JSON.parse(JSON.stringify(o)),sleep=ms=>new Promise(r=>setTimeout(r,ms));
+function pname(){return S.pname||(S.slides[0]&&String(S.slides[0].title||S.slides[0].label||'').replace(/[*_]/g,'').slice(0,40))||'Untitled carousel'}
+function saveProj(){if(!ready||!PID)return;const rec={id:PID,name:pname(),updated:Date.now(),state:typeof structuredClone==='function'?structuredClone(S):clone(S)};return tx('projects','readwrite',s=>s.put(rec)).catch(()=>{try{localStorage.setItem('cs-state',JSON.stringify({...S,img:null,slides:S.slides.map(x=>({...x,img:null}))}))}catch(e){}})}
+function applyRec(rec){const {slides,...rest}=rec.state,d=clone(S0);delete d.slides;Object.assign(S,d,rest);S.slides.splice(0,S.slides.length,...slides);PID=rec.id;LS('cs-current',PID);LS('cs-onboarded','1')}
+async function loadState(){
+try{const id=LS('cs-current');let rec=id?await tx('projects','readonly',s=>s.get(id)):null;
+if(!rec){const all=await tx('projects','readonly',s=>s.getAll());if(all&&all.length)rec=all.sort((a,b)=>b.updated-a.updated)[0]}
+if(rec){applyRec(rec);return}}catch(e){}
+try{const o=JSON.parse(localStorage.getItem('cs-state')||'null');if(o&&o.slides&&o.slides.length){const {slides,...rest}=o;Object.assign(S,rest);S.slides.splice(0,S.slides.length,...slides);LS('cs-onboarded','1');PID=uid();LS('cs-current',PID);return}}catch(e){}
+PID=uid();LS('cs-current',PID);fresh=true}
+async function openProj(id){if(id===PID)return;saveProj();await sleep(60);const rec=await tx('projects','readonly',s=>s.get(id));if(!rec)return;applyRec(rec);cur=0;histReset();sync();go(0)}
+async function newProject(blank){saveProj();const keep=clone(S);delete keep.slides;keep.img=null;if(keep.mode==='img')keep.mode='color';keep.pname='';Object.assign(S,keep);
+S.slides.splice(0,S.slides.length,{label:'',title:'',body:''});PID=uid();LS('cs-current',PID);cur=0;histReset();sync();go(0);saveProj();if(blank!==false)openTpl(true)}
+async function openLib(){saveProj();await sleep(80);const all=((await tx('projects','readonly',s=>s.getAll()))||[]).sort((a,b)=>b.updated-a.updated),
+o=document.createElement('div');o.id='ov';o.style.textAlign='left';o.innerHTML='<h3>My carousels</h3>';
+const nb=document.createElement('button');nb.className='pri';nb.textContent='+ New carousel';nb.onclick=()=>{o.remove();newProject()};o.appendChild(nb);
+all.forEach(r=>{const st=r.state||{},bg=st.mode==='grad'?GRADS[st.g||0].css:(st.bg||'#444'),row=document.createElement('div');row.className='lrow';
+const m=document.createElement('button');m.className='tpl';m.innerHTML='<b><span class="dot" style="background:'+bg+'"></span>'+esc(r.name)+(r.id===PID?' · open now':'')+'</b><small>'+((st.slides||[]).length)+' slides · '+new Date(r.updated).toLocaleDateString(undefined,{month:'short',day:'numeric'})+'</small>';
+m.onclick=async()=>{o.remove();await openProj(r.id)};row.appendChild(m);
+const act=(t,fn)=>{const b=document.createElement('button');b.className='s';b.textContent=t;b.onclick=async()=>{await fn();o.remove();openLib()};row.appendChild(b)};
+act('Rename',async()=>{const n=prompt('Name this carousel',r.name);if(!n||!n.trim())return;r.name=n.trim();r.state.pname=r.name;if(r.id===PID)S.pname=r.name;await tx('projects','readwrite',s=>s.put(r))});
+act('Copy',async()=>{const c={...r,id:uid(),name:r.name+' copy',updated:Date.now(),state:clone(r.state)};c.state.pname=c.name;await tx('projects','readwrite',s=>s.put(c))});
+act('Delete',async()=>{if(!confirm('Delete "'+r.name+'"? This cannot be undone.'))return;await tx('projects','readwrite',s=>s.delete(r.id));if(r.id===PID){const rest=all.filter(x=>x.id!==r.id);if(rest.length){await openProj0(rest[0].id)}else{await newProject(false)}}});
+o.appendChild(row)});
+const x=document.createElement('button');x.textContent='Close';x.onclick=()=>o.remove();x.style.marginTop='10px';o.appendChild(x);document.body.appendChild(o)}
+async function openProj0(id){PID=null;await openProj(id)}
+const LUM=new Map(),relL=(r,g,b)=>{const f=v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)};return .2126*f(r)+.7152*f(g)+.0722*f(b)},
+hexL=h=>{h=/^#[0-9a-f]{6}$/i.test(h||'')?h:'#000000';const n=parseInt(h.slice(1),16);return relL(n>>16,n>>8&255,n&255)};
+function photoLum(src,cb){if(LUM.has(src))return cb(LUM.get(src));const im=new Image();im.onload=()=>{const c=document.createElement('canvas');c.width=c.height=16;const x=c.getContext('2d');x.drawImage(im,0,0,16,16);const d=x.getImageData(0,0,16,16).data;let t=0;for(let i=0;i<d.length;i+=4)t+=relL(d[i],d[i+1],d[i+2]);LUM.set(src,t/256);cb(t/256)};im.src=src}
+function contrast(){const s=S.slides[cur]||{},pic=s.img||(S.mode==='img'&&S.img?S.img:null),show=m=>['cw1','cw2'].forEach(id=>{const e=$(id);if(e){e.textContent=m;e.hidden=!m}});
+if(!pic)return show('');const tl=hexL(S.text),op=1-(S.imgT||0);photoLum(pic,pl=>{const L=(op*pl+(1-op)*hexL(S.bg))*(1-S.dim*op),r=(Math.max(L,tl)+.05)/(Math.min(L,tl)+.05);show(r<3?'Heads up: the text may be hard to read on this photo. Try more Darken, or change the text color in Brand.':'')})}
+let inl=null;
+function renderPreview(){
+const box=$('pv');cur=Math.min(cur,S.slides.length-1);
+const st=box.parentElement,nav=st.querySelector('.nav'),mob=innerWidth<900,
+W=(st.clientWidth-(mob?32:64))||320,mh=mob?Math.max(120,st.clientHeight-nav.offsetHeight-22):Math.max(240,st.clientHeight-nav.offsetHeight-78),sc=Math.min(W/S.w,mh/S.h);
+$('pjn').textContent=pname();
+if(inl&&box.firstChild){const f=box.firstChild;f.style.width=S.w*sc+'px';f.style.height=S.h*sc+'px';f.firstChild.style.transform=`scale(${sc})`;return}
+box.innerHTML='';
+const f=document.createElement('div');f.style.cssText=`width:${S.w*sc}px;height:${S.h*sc}px;border-radius:8px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.28)`;
+const el=slideEl(cur);el.style.transform=`scale(${sc})`;el.style.transformOrigin='0 0';f.appendChild(el);f.onclick=e=>{if(inl)return;const t=e.target.closest('[data-f]');if(t)edit(t.dataset.f,t)};box.appendChild(f);
+$('pos').textContent=`${cur+1} / ${S.slides.length}`;thumbs();contrast();persist()}
+function thumbs(){const c=$('chips');c.innerHTML='';const W=innerWidth>=900?(innerWidth>=1500?120:104):56,sc=W/S.w,H=Math.round(S.h*sc);
+S.slides.forEach((s,i)=>{const b=document.createElement('button');b.className='th2'+(i===cur?' on':'');b.style.cssText=`width:${W+4}px;height:${H+4}px`;
+const el=slideEl(i);el.style.cssText+=`;position:absolute;top:0;left:0;transform:scale(${sc});transform-origin:0 0;pointer-events:none`;b.appendChild(el);
+const n=document.createElement('i');n.textContent=i+1;b.appendChild(n);b.onclick=()=>{if(Date.now()-noClick<400)return;go(i)};dragInit(b,i);c.appendChild(b)});
+const a=document.createElement('button');a.className='th2 add';a.textContent='+';a.title='Add slide';a.style.cssText=`width:${W+4}px;height:${H+4}px`;
+a.onclick=()=>{S.slides.push({label:'',title:'',body:''});go(S.slides.length-1)};c.appendChild(a)}
+function openTab(i){$('tabs').children[i].click()}
+function openPanel(id){document.querySelectorAll('.tpanel').forEach(p=>p.hidden=p.id!==id);document.querySelectorAll('#tools button').forEach(b=>b.classList.toggle('on',b.dataset.p===id));if(id)setTimeout(()=>{try{$(id).scrollIntoView({block:'nearest',behavior:'smooth'})}catch(e){}},60)}
+function startInline(t,k){if(inl)return;const s=S.slides[cur];inl={k,prev:shS};if(mobileLayout())setSheet(0,true);setTimeout(renderPreview,300);
+t.contentEditable='plaintext-only';if(t.contentEditable!=='plaintext-only')t.contentEditable='true';
+t.textContent=s[k]||'';t.style.whiteSpace='pre-wrap';t.style.outline='4px dashed rgba(128,128,128,.75)';t.style.outlineOffset='12px';
+t.oninput=()=>{s[k]=t.innerText.replace(/\n$/,'');$('f-'+k).value=s[k];thumbs();persist()};
+t.onkeydown=e=>{if(e.key==='Escape')t.blur()};
+t.onblur=()=>{const p=inl.prev;inl=null;if(mobileLayout())setSheet(p);renderPreview()};
+t.focus();const r=document.createRange();r.selectNodeContents(t);r.collapse(false);const se=getSelection();se.removeAllRanges();se.addRange(r)}
+function edit(k,t){if(k==='cta'){openTab(0);openPanel('ctaed');if(shS===0)setSheet(1);return}
+if(k==='logo'){openTab(2);if(shS===0)setSheet(1);return}
+if(t&&(k==='label'||k==='title'||k==='body'))return startInline(t,k);
+openTab(0);const x=$('f-'+k);if(x)x.focus()}
+function go(i){cur=Math.max(0,Math.min(S.slides.length-1,i));show();try{$('chips').children[cur].scrollIntoView({inline:'center',block:'nearest'})}catch(e){}}
+function show(){
+
+const s=S.slides[cur];['label','title','body'].forEach(k=>$('f-'+k).value=s[k]||'');$('al1').checked=!!s.align;$('szs').value=s.sz||1;rvUpd($('szs'));{const isLast=cur===S.slides.length-1;$('tc-cta').hidden=!isLast;if(!isLast&&!$('ctaed').hidden)openPanel(null)}spSync();alSync();renderPreview()}
+function spSync(){const s=S.slides[cur]||{};$('spt').textContent=s.img?'Change photo':'Add photo';$('spx').hidden=$('spa').hidden=$('sprow').hidden=!s.img}
+function alSync(){const s=S.slides[cur]||{},a=s.align||S.align||'left';document.querySelectorAll('#al button').forEach(b=>b.classList.toggle('on',b.dataset.v===a));document.querySelectorAll('#va button').forEach(b=>b.classList.toggle('on',b.dataset.v===(S.valign||'middle')));document.querySelectorAll('#lgs button').forEach(b=>b.classList.toggle('on',b.dataset.v===S.logoShape));document.querySelectorAll('#cl button').forEach(b=>b.classList.toggle('on',b.dataset.v===S.ctaLay))}
+function sync(){
+document.querySelectorAll('[data-k]').forEach(x=>{const v=S[x.dataset.k];if(x.type==='checkbox')x.checked=!!v;else x.value=v});
+document.querySelectorAll('#lay button').forEach(b=>b.classList.toggle('on',b.dataset.v===S.layout));
+{const z=[[1080,'1:1'],[1350,'4:5'],[1920,'9:16']].find(x=>x[0]===S.h);$('szb').textContent=(z?z[1]:'')+' ▾'}
+document.querySelectorAll('#bgs [data-g]').forEach(b=>b.classList.toggle('on',S.mode==='grad'&&+b.dataset.g===S.g));
+$('dimrow').hidden=S.mode!=='img'||!S.img;$('lgc').hidden=!S.logo;document.querySelectorAll('#themes .th').forEach(b=>b.classList.toggle('on',b.textContent===S.themeName));document.querySelectorAll('input[type=range]').forEach(rvUpd);alSync()}
+function applyTheme(t,name){const m=S.mode;Object.assign(S,t);if(name)S.themeName=name;if(m==='img'&&S.img)S.mode='img';S.slides.forEach(x=>delete x.align);$('al1').checked=false;sync();renderPreview()}
+function init(){
+if(S.layout==='center'){S.layout='bold';S.align='center'}
+const fo=Object.keys(FONTS).map(f=>`<option>${f}</option>`).join('');document.querySelector('[data-k=hf]').innerHTML=fo;document.querySelector('[data-k=bf]').innerHTML=fo;
+const tabs=['Slides','Style','Brand'];
+tabs.forEach((n,i)=>{const IC=['<rect x="3" y="5" width="14" height="14" rx="2"/><path d="M20 8v8"/>', '<circle cx="12" cy="12" r="9"/><path d="M12 3v18M12 12h9"/>', '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>'],b=document.createElement('button');b.innerHTML='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">'+IC[i]+'</svg><span>'+n+'</span>';b.className=i?'':'on';b.onclick=()=>{if(shS===0)setSheet(1);$('sc').scrollTop=0;tabs.forEach((_,j)=>{$('t'+j).hidden=j!==i;$('tabs').children[j].classList.toggle('on',j===i)})};$('tabs').appendChild(b)});
+Object.keys(THEMES).forEach(n=>{const t=THEMES[n],b=document.createElement('button');b.className='th';b.textContent=n;b.style.cssText=`background:${t.mode==='grad'?GRADS[t.g].css:t.bg};color:${t.text};border-color:${t.accent};font-family:'${t.hf}'`;b.onclick=()=>applyTheme(t,n);$('themes').appendChild(b)});
+[['Bold','bold'],['Typewriter','type'],['Minimal','minimal'],['Bar','bar'],['Quote','quote']].forEach(([l,v])=>{const b=document.createElement('button');b.textContent=l;b.dataset.v=v;b.onclick=()=>{S.layout=v;sync();renderPreview()};$('lay').appendChild(b)});
+GRADS.forEach((g,i)=>{const b=document.createElement('button');b.className='sw';b.dataset.g=i;b.title=g.n;b.style.background=g.css;b.onclick=()=>{S.mode='grad';S.g=i;S.text=g.text;sync();renderPreview()};$('bgs').appendChild(b)});
+const ph=document.createElement('label');ph.className='chip';ph.style.margin='0';ph.innerHTML='Photo<input type="file" accept="image/*" hidden>';
+const setPhoto=e=>{const f=e.target.files[0];e.target.value='';if(!f)return;scaled(f,1600,'image/jpeg',.85,u=>{S.img=u;S.mode='img';if(ink(S.text)==='#111111')S.text='#ffffff';sync();renderPreview()})};
+ph.querySelector('input').onchange=setPhoto;$('phf').onchange=setPhoto;$('bgs').appendChild(ph);
+$('phx').onclick=()=>{S.img=null;S.mode='color';sync();renderPreview()};
+$('lgf').onchange=e=>{const f=e.target.files[0];e.target.value='';if(!f)return;scaled(f,512,'image/png',1,u=>{S.logo=u;sync();renderPreview()})};
+$('lgx').onclick=()=>{S.logo=null;sync();renderPreview()};
+document.querySelectorAll('#lgs button').forEach(b=>b.onclick=()=>{S.logoShape=b.dataset.v;sync();renderPreview()});
+document.querySelectorAll('#al button').forEach(b=>b.onclick=()=>{if($('al1').checked)S.slides[cur].align=b.dataset.v;else{S.align=b.dataset.v;S.slides.forEach(x=>delete x.align)}alSync();renderPreview()});
+$('al1').onchange=e=>{const s=S.slides[cur];if(e.target.checked)s.align=S.align||'left';else delete s.align;alSync();renderPreview()};
+document.querySelectorAll('#va button').forEach(b=>b.onclick=()=>{S.valign=b.dataset.v;alSync();renderPreview()});
+$('tpl').onclick=()=>openTpl(false);
+let lastTA=null;['f-title','f-body'].forEach(id=>$(id).addEventListener('focus',()=>lastTA=$(id)));
+document.querySelectorAll('#rt button').forEach(b=>{b.onpointerdown=e=>e.preventDefault();b.onclick=()=>{const t=lastTA||$('f-body'),m=b.dataset.m,a=t.selectionStart,e=t.selectionEnd,v=t.value;t.focus();t.value=v.slice(0,a)+m+v.slice(a,e)+m+v.slice(e);t.setSelectionRange(a+m.length,e+m.length);t.dispatchEvent(new Event('input'))}});
+$('szs').oninput=e=>{const v=parseFloat(e.target.value),s=S.slides[cur];if(Math.abs(v-1)<.03)delete s.sz;else s.sz=v;renderPreview()};
+$('spf').onchange=e=>{const f=e.target.files[0];e.target.value='';if(!f)return;scaled(f,1200,'image/jpeg',.8,u=>{S.slides[cur].img=u;spSync();renderPreview()})};
+$('spx').onclick=()=>{delete S.slides[cur].img;spSync();renderPreview()};
+$('spa').onclick=()=>{const s=S.slides[cur];S.img=s.img;S.mode='img';delete s.img;sync();spSync();renderPreview()};
+$('avf').onchange=e=>{const f=e.target.files[0];e.target.value='';if(!f)return;scaled(f,400,'image/png',1,u=>{S.avatar=u;renderPreview()})};
+$('avx').onclick=()=>{S.avatar=null;renderPreview()};
+document.querySelectorAll('#cl button').forEach(b=>b.onclick=()=>{S.ctaLay=b.dataset.v;sync();renderPreview()});
+$('undo').onclick=()=>undoRedo(-1);$('redo').onclick=()=>undoRedo(1);
+document.addEventListener('keydown',e=>{const t=document.activeElement||{},typing=/INPUT|TEXTAREA|SELECT/.test(t.tagName)||t.isContentEditable;if(typing||$('ov')||$('onb'))return;
+if(!(e.ctrlKey||e.metaKey)&&(e.key==='ArrowLeft'||e.key==='ArrowRight')){e.preventDefault();go(cur+(e.key==='ArrowRight'?1:-1));return}
+if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='y'){e.preventDefault();undoRedo(1)}});
+document.addEventListener('keydown',e=>{if(!(e.ctrlKey||e.metaKey)||e.key.toLowerCase()!=='z'||/INPUT|TEXTAREA|SELECT/.test((document.activeElement||{}).tagName))return;e.preventDefault();undoRedo(e.shiftKey?1:-1)});
+document.querySelectorAll('[data-k]').forEach(x=>{x.oninput=()=>{const k=x.dataset.k;S[k]=x.type==='checkbox'?x.checked:x.type==='range'?parseFloat(x.value):x.value;if(k==='bg'&&S.mode!=='img')S.mode='color';sync();renderPreview()}});
+['label','title','body'].forEach(k=>$('f-'+k).oninput=e=>{S.slides[cur][k]=e.target.value;renderPreview()});
+$('prev').onclick=()=>go(cur-1);$('next').onclick=()=>go(cur+1);
+const A=S.slides;
+$('ml').onclick=()=>{if(cur>0){[A[cur-1],A[cur]]=[A[cur],A[cur-1]];go(cur-1)}};
+$('mr').onclick=()=>{if(cur<A.length-1){[A[cur+1],A[cur]]=[A[cur],A[cur+1]];go(cur+1)}};
+$('dup').onclick=()=>{A.splice(cur+1,0,{...A[cur]});go(cur+1)};
+$('del').onclick=()=>{if(A.length>1){A.splice(cur,1);go(cur)}};
+$('dlb').onclick=e=>{e.stopPropagation();$('dlm').hidden=!$('dlm').hidden};
+document.addEventListener('click',()=>$('dlm').hidden=true);
+$('d1').onclick=()=>dl(cur);$('new').onclick=()=>newProject();$('pj').onclick=openLib;$('bset').onclick=()=>openOnboard(false);$('dall').onclick=zipAll;$('dpdf').onclick=pdfAll;$('dimg').onclick=imgsAll;
+$('szb').onclick=()=>{const Z=[1080,1350,1920],n=Z[(Z.indexOf(S.h)+1)%3];S.w=1080;S.h=n;sync();renderPreview()};
+$('more').onclick=e=>{e.stopPropagation();$('mm').hidden=!$('mm').hidden};document.addEventListener('click',()=>{$('mm').hidden=true;$('hm').hidden=true});
+$('hmb').onclick=e=>{e.stopPropagation();$('hm').hidden=!$('hm').hidden};
+brandList();$('bs').onclick=saveBrand;$('bl').onchange=loadBrand;
+document.querySelectorAll('#tools button').forEach(b=>b.onclick=()=>openPanel($(b.dataset.p).hidden?b.dataset.p:null));
+place();rvInit();sheetInit();
+sync();show();histReset()}
+const IM=[];let hist=[],hi=0,noClick=0,DR=null;
+function imgId(u){let i=IM.indexOf(u);if(i<0)i=IM.push(u)-1;return '@@'+i}
+function snapStr(){return JSON.stringify(S,(k,v)=>(k==='img'||k==='logo'||k==='avatar')&&typeof v==='string'?imgId(v):v)}
+function updUndo(){$('undo').disabled=hi<=0;$('redo').disabled=hi>=hist.length-1}
+function histReset(){hist=[snapStr()];hi=0;updUndo()}
+function histPush(){const t=snapStr();if(t===hist[hi])return;hist.splice(hi+1);hist.push(t);if(hist.length>40)hist.shift();hi=hist.length-1;updUndo()}
+function undoRedo(d){histPush();const n=hi+d;if(n<0||n>=hist.length)return;hi=n;
+const o=JSON.parse(hist[hi],(k,v)=>typeof v==='string'&&v.startsWith('@@')?IM[+v.slice(2)]:v),sl=o.slides;delete o.slides;Object.assign(S,o);S.slides.splice(0,S.slides.length,...sl);
+cur=Math.min(cur,S.slides.length-1);sync();show();updUndo()}
+document.addEventListener('touchmove',e=>{if(DR&&e.cancelable)e.preventDefault()},{passive:false});
+function dragInit(b,i){
+b.addEventListener('contextmenu',e=>e.preventDefault());
+b.addEventListener('pointerdown',e=>{
+if(e.pointerType==='mouse'&&e.button!==0)return;
+const ch=$('chips'),vert=getComputedStyle(ch).flexDirection==='column',pos=ev=>vert?ev.clientY:ev.clientX,oth=ev=>vert?ev.clientX:ev.clientY,
+p0=pos(e),o0=oth(e),touch=e.pointerType!=='mouse';let tm=0,t=i;
+const begin=()=>{DR={};b.classList.add('drag')};
+if(touch)tm=setTimeout(begin,350);
+const mv=ev=>{
+if(!DR){if(Math.abs(pos(ev)-p0)>6||Math.abs(oth(ev)-o0)>6){if(touch)end(true);else begin()}return}
+b.style.transform=vert?`translateY(${pos(ev)-p0}px)`:`translateX(${pos(ev)-p0}px)`;
+const bs=[...ch.querySelectorAll('.th2:not(.add)')];t=0;bs.forEach((o,j)=>{if(j===i)return;const r=o.getBoundingClientRect(),mid=vert?r.top+r.height/2:r.left+r.width/2;if(pos(ev)>mid)t++});
+bs.forEach((o,j)=>{o.classList.remove('overL','overR','overT','overB');if(j!==i&&j===t)o.classList.add(vert?(t>i?'overB':'overT'):(t>i?'overR':'overL'))});
+const r=ch.getBoundingClientRect();if(vert){if(ev.clientY>r.bottom-30)ch.scrollTop+=14;else if(ev.clientY<r.top+30)ch.scrollTop-=14}else{if(ev.clientX>r.right-30)ch.scrollLeft+=14;else if(ev.clientX<r.left+30)ch.scrollLeft-=14}};
+const end=cancel=>{clearTimeout(tm);document.removeEventListener('pointermove',mv);document.removeEventListener('pointerup',up);document.removeEventListener('pointercancel',cx);
+if(DR){DR=null;noClick=Date.now();if(!cancel&&t!==i){const A=S.slides,[m]=A.splice(i,1);A.splice(t,0,m);go(t);return}go(i)}};
+const up=()=>end(false),cx=()=>end(true);
+document.addEventListener('pointermove',mv);document.addEventListener('pointerup',up);document.addEventListener('pointercancel',cx)})}
+function scaled(file,max,type,q,cb){const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.max(1,Math.round(im.width*k));c.height=Math.max(1,Math.round(im.height*k));c.getContext('2d').drawImage(im,0,0,c.width,c.height);cb(c.toDataURL(type,q))};im.onerror=()=>status('Could not read that image.');im.src=r.result};r.onerror=()=>status('Could not read that file.');r.readAsDataURL(file)}
+const CTA={label:'',title:'Found this *useful*?',body:'Save this post and share it with someone who needs to see it.'};
+const TPLS=[
+{n:'Tips list',d:'Cover, 4 tips, follow slide',s:()=>[{label:'4 tips',title:'4 *Simple Habits* That Change Everything.',body:'Swipe to see them all.'},{label:'Tip 1',title:'Start before you feel ready.',body:'Momentum beats motivation. Take the *first small step* today.'},{label:'Tip 2',title:'Protect your mornings.',body:'The first hour sets the tone. Guard it from *noise and screens*.'},{label:'Tip 3',title:'Write it down.',body:'Ideas fade fast. A *simple note* turns a thought into a plan.'},{label:'Tip 4',title:'Review every week.',body:'Small *course corrections* beat big resets.'},{...CTA}]},
+{n:'Myth vs Fact',d:'Cover, 2 myth/fact pairs, follow slide',s:()=>[{label:'Myths busted',title:'Stop Believing These *2 Myths*.',body:''},{label:'Myth #1',title:'"You need more time."',body:'Most people don\'t lack time. They lack a *clear priority*.'},{label:'Fact #1',title:'Clarity beats hours.',body:'One focused hour of the *right task* outperforms a distracted day.'},{label:'Myth #2',title:'"Hard work is enough."',body:'Effort in the wrong direction only gets you *further from the goal*.'},{label:'Fact #2',title:'Direction first, effort second.',body:'Pick the target, *then* push.'},{...CTA}]},
+{n:'Quote series',d:'Cover, 3 big quotes, follow slide',s:()=>[{label:'Words to live by',title:'3 Quotes To *Reset* Your Week.',body:''},{label:'',title:'The best time to start was yesterday. The next best time is *now*.',body:'Author name'},{label:'',title:'You don\'t have to see the whole staircase, just take the *first step*.',body:'Author name'},{label:'',title:'Discipline is choosing what you want *most* over what you want now.',body:'Author name'},{...CTA}]},
+{n:'Step by step',d:'Cover, 4 numbered steps, follow slide',s:()=>[{label:'How to',title:'How To *Build A Habit* In 4 Steps.',body:'Swipe for the full method.'},{label:'Step 1',title:'Pick one habit.',body:'Keep it so small it feels *almost silly*.'},{label:'Step 2',title:'Attach it to a trigger.',body:'After I *pour my coffee*, I will...'},{label:'Step 3',title:'Track it daily.',body:'A simple tick on a calendar builds *visible proof*.'},{label:'Step 4',title:'Raise the bar slowly.',body:'Grow by *1%* once it feels easy.'},{...CTA}]},
+{n:'Story',d:'Hook, problem, turning point, lesson, follow slide',s:()=>[{label:'My story',title:'I Almost *Quit* Last Year.',body:'Here is what changed.'},{label:'The problem',title:'',body:'I was working harder every month and getting *nowhere*. Every day looked the same.'},{label:'The turning point',title:'',body:'One conversation made me ask a simple question: *"What am I actually building?"*'},{label:'The lesson',title:'',body:'Progress is not about speed. It is about *direction*, and being honest about where you are.'},{...CTA}]}];
+TPLS.push(
+{n:'Case study',d:'Result, situation, what I tried, what worked, takeaway',s:()=>[{label:'Case study',title:'How I Went From *X* To *Y* In 90 Days.',body:'The honest breakdown.'},{label:'The situation',title:'',body:'Where things stood before: the *real numbers* and the real problem.'},{label:'What I tried',title:'',body:'The things that *did not work*, and why it was worth trying them.'},{label:'What worked',title:'',body:'The one change that moved the needle. Keep it *specific*.'},{label:'The result',title:'+120%',body:'Say the *number*, then what it meant for the business.'},{...CTA}]},
+{n:'Lessons learned',d:'Cover, 4 lessons, follow slide',s:()=>[{label:'Lessons',title:'4 Lessons I Learned The *Hard Way*.',body:'So you do not have to.'},{label:'Lesson 1',title:'Done beats perfect.',body:'Ship the *first version*. Feedback improves it faster than waiting.'},{label:'Lesson 2',title:'Say it simply.',body:'If a 12-year-old cannot follow it, *simplify it*.'},{label:'Lesson 3',title:'Consistency wins.',body:'Small steps *every week* beat big bursts.'},{label:'Lesson 4',title:'Ask for help early.',body:'It saves *months*, not minutes.'},{...CTA}]},
+{n:'Hot take',d:'A bold opinion, the common view, the twist, why',s:()=>[{label:'Hot take',title:'Most Advice About *This* Is Wrong.',body:'Here is what I believe instead.'},{label:'What everyone says',title:'',body:'The popular advice, stated *fairly*. People should recognise it.'},{label:'The problem',title:'',body:'Why it breaks down in *real life*.'},{label:'What I do instead',title:'',body:'Your approach, in *one clear sentence*.'},{...CTA,title:'Agree or *disagree*?',body:'Tell me in the comments. I read every one.'}]},
+{n:'Checklist',d:'Cover, 5 checklist items, follow slide',s:()=>[{label:'Checklist',title:'The *5-Point* Checklist Before You Post.',body:'Save this for later.'},{label:'',title:'',body:'**1.** Is the first line *a hook*?\n\n**2.** Is it one idea per slide?\n\n**3.** Can you read it on a phone?'},{label:'',title:'',body:'**4.** Is there *one clear action* at the end?\n\n**5.** Would you stop scrolling for this?'},{...CTA}]});
+function openTpl(fresh){const o=document.createElement('div');o.id='ov';o.style.textAlign='left';o.innerHTML='<h3>Starters</h3><p style="opacity:.8">Pick a ready-made structure, then edit the words. Your colors, fonts and logo stay.</p>';
+TPLS.forEach(t=>{const b=document.createElement('button');b.className='tpl';b.innerHTML='<b>'+t.n+'</b><small>'+t.d+'</small>';b.onclick=()=>{if(!fresh&&!confirm('Replace your current slides with this template?'))return;S.slides.splice(0,S.slides.length,...t.s());o.remove();go(0)};o.appendChild(b)});
+const x=document.createElement('button');x.textContent=fresh?'Start blank':'Close';x.onclick=()=>o.remove();o.appendChild(x);document.body.appendChild(o)}
+function openOnboard(first){if($('onb'))return;let pickT=null,pickA=null,logo=null;const o=document.createElement('div');o.id='onb';
+o.innerHTML='<div class="ob"><h2>Set up your brand</h2><p class="hint" style="margin:0 0 6px">20 seconds. Every carousel will start looking like you. You can change anything later.</p><label>Your handle<input id="ob-h" placeholder="@yourhandle" value="'+esc(S.handle==='@YourHandle'?'':S.handle)+'"></label><label>Name (optional)<input id="ob-n" value="'+esc(S.name)+'"></label><h3>Pick a look</h3><div class="chips" id="ob-t"></div><h3>Accent color</h3><div class="chips" id="ob-a"></div><h3>Logo or profile photo</h3><div class="row" style="margin-top:0"><label class="chip" style="margin:0;text-align:center">Upload<input type="file" accept="image/*" id="ob-l" hidden></label></div><p class="hint" id="ob-lh">Used as your logo and on the follow slide. Optional.</p><div class="row" style="margin-top:22px"><button class="pri" id="ob-go">Start creating</button><button id="ob-skip">'+(first?'Skip for now':'Cancel')+'</button></div></div>';
+document.body.appendChild(o);
+Object.keys(THEMES).forEach(n=>{const t=THEMES[n],b=document.createElement('button');b.className='th';b.textContent=n;b.style.cssText='background:'+(t.mode==='grad'?GRADS[t.g].css:t.bg)+';color:'+t.text+';border-color:'+t.accent+";font-family:'"+t.hf+"'";b.onclick=()=>{pickT=n;[...$('ob-t').children].forEach(x=>x.classList.toggle('on',x===b))};$('ob-t').appendChild(b)});
+['#f0b93a','#ff6b6b','#4cc9f0','#39d98a','#a78bfa','#ff8fab','#ffffff','#111111'].forEach(c=>{const b=document.createElement('button');b.className='sw';b.style.background=c;b.onclick=()=>{pickA=c;[...$('ob-a').children].forEach(x=>x.classList.toggle('on',x===b))};$('ob-a').appendChild(b)});
+const ci=document.createElement('input');ci.type='color';ci.className='sw';ci.value=S.accent;ci.title='Custom';ci.oninput=()=>{pickA=ci.value;[...$('ob-a').children].forEach(x=>x.classList.toggle('on',x===ci))};$('ob-a').appendChild(ci);
+$('ob-l').onchange=e=>{const f=e.target.files[0];e.target.value='';if(!f)return;scaled(f,512,'image/png',1,u=>{logo=u;$('ob-lh').textContent='Logo added ✓'})};
+$('ob-skip').onclick=()=>{LS('cs-onboarded','1');o.remove()};
+$('ob-go').onclick=()=>{const h=$('ob-h').value.trim();if(h)S.handle=h[0]==='@'?h:'@'+h;S.name=$('ob-n').value.trim();if(pickT)applyTheme(THEMES[pickT],pickT);if(pickA)S.accent=pickA;if(logo){S.logo=logo;S.avatar=logo}
+LS('cs-onboarded','1');try{const b=brands();b['My brand']={};BK.forEach(k=>b['My brand'][k]=S[k]);localStorage.setItem('brands',JSON.stringify(b));brandList()}catch(e){}o.remove();sync();renderPreview()}}
+let _desk=null;
+function place(){const d=innerWidth>=900;if(d===_desk)return;_desk=d;
+if(d){$('rail').appendChild($('chipw'));$('hdb').insertBefore($('dlw'),$('hmb'))}
+else{const t=$('t0');t.insertBefore($('chipw'),t.children[1]);$('bar').appendChild($('dlw'))}
+$('dlb').textContent=d?'Download ▾':'Download ▴';const h=document.querySelector('#t0 .hd h3');if(h)h.textContent=d?'This slide':'Slides'}
+let shS=1;const mobileLayout=()=>innerWidth<900;
+function shH(){const H=innerHeight;return [$('bar').offsetHeight+34,Math.round(H*.46),Math.round(H*.8)]}
+function setSheet(n,noRe){shS=Math.max(0,Math.min(2,n));LS('cs-sheet',shS);const c=document.querySelector('.ctl');c.dataset.s=shS;c.classList.remove('drag');document.documentElement.style.setProperty('--sh',mobileLayout()?shH()[shS]+'px':'auto');if(!noRe)setTimeout(renderPreview,290)}
+function sheetInit(){const g=$('grab'),c=document.querySelector('.ctl');let y0=null,h0=0,moved=false;
+const sv=LS('cs-sheet');shS=sv===null?1:Math.max(0,Math.min(2,+sv||0));setSheet(shS,true);
+g.addEventListener('pointerdown',e=>{y0=e.clientY;h0=c.offsetHeight;moved=false;try{g.setPointerCapture(e.pointerId)}catch(_){}c.classList.add('drag')});
+g.addEventListener('pointermove',e=>{if(y0===null)return;const dy=y0-e.clientY;if(Math.abs(dy)>4)moved=true;if(!moved)return;const H=shH(),h=Math.max(H[0],Math.min(H[2],h0+dy));document.documentElement.style.setProperty('--sh',h+'px');c.dataset.s=h>H[0]+24?'1':'0'});
+const end=()=>{if(y0===null)return;const H=shH(),h=c.offsetHeight;y0=null;c.classList.remove('drag');if(!moved){setSheet((shS+1)%3);return}let n=0,best=1e9;H.forEach((v,i)=>{const d=Math.abs(v-h);if(d<best){best=d;n=i}});setSheet(n)};
+g.addEventListener('pointerup',end);g.addEventListener('pointercancel',end)}
+const RVF={scale:v=>Math.round(v*100)+'%',dim:v=>Math.round(v*100)+'%',imgT:v=>Math.round(v*100)+'%',pad:v=>v+'px',logoSize:v=>v+'px',logoBw:v=>v+'px',szs:v=>Math.round(v*100)+'%'};
+function rvInit(){document.querySelectorAll('input[type=range]').forEach(r=>{const host=r.closest('label')||r.previousElementSibling;if(!host)return;const sp=document.createElement('span');sp.className='rv';host.appendChild(sp);r._rv=sp;r.addEventListener('input',()=>rvUpd(r))})}
+function rvUpd(r){if(!r||!r._rv)return;const f=RVF[r.dataset.k||r.id];r._rv.textContent=f?f(parseFloat(r.value)):''}
+const BK=['layout','bg','text','accent','hf','bf','mode','g','handle','name','swipe','ctaText','ctaOn','dots','count','showHandle','scale','align','valign','pad','logo','logoShape','logoSize','logoPos','logoBw','logoBc','logoShow','avatar','avShape','ctaBtn','ctaLay'];
+function brands(){try{return JSON.parse(localStorage.getItem('brands')||'{}')}catch(e){return {}}}
+function brandList(){const l=$('bl');l.innerHTML='<option value="">Choose…</option>';Object.keys(brands()).forEach(n=>{const o=document.createElement('option');o.textContent=n;l.appendChild(o)})}
+function saveBrand(){const n=$('bn').value.trim();if(!n)return;const b=brands();b[n]={};BK.forEach(k=>b[n][k]=S[k]);try{localStorage.setItem('brands',JSON.stringify(b))}catch(e){status('Could not save brand here.');return}brandList();$('bl').value=n;status('Brand saved.')}
+function loadBrand(){const b=brands()[$('bl').value];if(!b)return;Object.assign(S,b);sync();renderPreview()}
+let stT;function status(t){$('st').textContent=t;clearTimeout(stT);if(t)stT=setTimeout(()=>$('st').textContent='',6000)}
+const GURL='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@400;700;800&family=DM+Serif+Display&family=Special+Elite&family=Courier+Prime:wght@400;700&family=Oswald:wght@400;600;700&family=Bebas+Neue&family=Space+Grotesk:wght@400;700&family=Anton&family=Caveat:wght@400;700&display=swap';
+const LF=[['Inter','400','inter-400'],['Inter','600','inter-600'],['Inter','700','inter-700'],['Inter','800','inter-800'],['Poppins','400','poppins-400'],['Poppins','500 600','poppins-500'],['Poppins','700 800','poppins-700'],['Lora','400 700','lora']];
+let _db;function db(){return _db||(_db=new Promise((ok,no)=>{const r=indexedDB.open('cs',1);r.onupgradeneeded=()=>{const d=r.result;d.createObjectStore('kv');d.createObjectStore('projects',{keyPath:'id'})};r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)}))}
+const tx=(st,mode,fn)=>db().then(d=>new Promise((ok,no)=>{const t=d.transaction(st,mode),q=fn(t.objectStore(st));t.oncomplete=()=>ok(q&&q.result);t.onerror=()=>no(t.error);t.onabort=()=>no(t.error)}));
+const kvGet=k=>tx('kv','readonly',s=>s.get(k)).catch(()=>null),kvSet=(k,v)=>tx('kv','readwrite',s=>s.put(v,k)).catch(()=>{});
+async function b64(url){const r=await fetch(url);if(!r.ok)throw new Error('font fetch '+r.status);const b=await r.blob();return new Promise((ok,no)=>{const f=new FileReader();f.onload=()=>ok(f.result);f.onerror=no;f.readAsDataURL(b)})}
+async function googleFamCss(fam){const t=await (await fetch(GURL)).text(),re=/\/\*\s*([\w-]+)\s*\*\/\s*@font-face\s*\{([^}]*)\}/g,jobs=[];let m;
+while((m=re.exec(t))){if(!['latin','latin-ext','vietnamese'].includes(m[1]))continue;const body=m[2];if(!new RegExp("font-family:\\s*'?"+fam+"'?\\s*;").test(body))continue;jobs.push([body,/url\(([^)]+)\)/.exec(body)[1]])}
+if(!jobs.length)throw new Error('no font '+fam);let out='';
+for(const [body,u] of jobs){out+='@font-face{'+body.replace(/src:\s*[^;]+;/,'src:url('+await b64(u)+');')+'}'}return out}
+const fcMem={};
+async function famCss(fam){if(fcMem[fam]!==undefined)return fcMem[fam];let css='';const loc=LF.filter(x=>x[0]===fam);
+try{if(loc.length){for(const [f,w,file] of loc)css+="@font-face{font-family:'"+f+"';font-weight:"+w+";src:url("+await b64('fonts/'+file+'.woff')+") format('woff')}"}
+else{css=await kvGet('font:'+fam)||'';if(!css){css=await googleFamCss(fam);kvSet('font:'+fam,css)}}}catch(e){css=''}
+if(css)fcMem[fam]=css;return css}
+async function renderCanvas(i){await document.fonts.ready;const el=slideEl(i),css=(await famCss(S.hf))+(S.bf!==S.hf?await famCss(S.bf):'');
+const xml=new XMLSerializer().serializeToString(el),svg=`<svg xmlns="http://www.w3.org/2000/svg" width="${S.w}" height="${S.h}"><defs><style>${css}</style></defs><foreignObject x="0" y="0" width="${S.w}" height="${S.h}">${xml}</foreignObject></svg>`,
+url='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg),im=new Image();
+await new Promise((ok,no)=>{im.onload=ok;im.onerror=()=>no(new Error('could not draw the slide'));im.src=url});
+const c=document.createElement('canvas');c.width=S.w;c.height=S.h;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,S.w,S.h);x.drawImage(im,0,0);
+if(isIOS){await new Promise(r=>setTimeout(r,80));x.drawImage(im,0,0)}return c}
+async function snap(i,type,q){const c=await renderCanvas(i);return new Promise((ok,no)=>c.toBlob(b=>b?ok(b):no(new Error('export failed')),type||'image/png',q))}
+const CRC=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
+function crc32(b){let c=0xFFFFFFFF;for(let i=0;i<b.length;i++)c=CRC[(c^b[i])&255]^(c>>>8);return (c^0xFFFFFFFF)>>>0}
+async function makeZip(files){const enc=new TextEncoder(),parts=[],cd=[];let off=0;
+for(const f of files){const d=new Uint8Array(await f.blob.arrayBuffer()),nm=enc.encode(f.name),crc=crc32(d),h=new DataView(new ArrayBuffer(30));
+h.setUint32(0,0x04034b50,true);h.setUint16(4,20,true);h.setUint16(6,0x0800,true);h.setUint16(12,0x21,true);h.setUint32(14,crc,true);h.setUint32(18,d.length,true);h.setUint32(22,d.length,true);h.setUint16(26,nm.length,true);
+parts.push(h.buffer,nm,d);
+const c=new DataView(new ArrayBuffer(46));c.setUint32(0,0x02014b50,true);c.setUint16(4,20,true);c.setUint16(6,20,true);c.setUint16(8,0x0800,true);c.setUint16(14,0x21,true);c.setUint32(16,crc,true);c.setUint32(20,d.length,true);c.setUint32(24,d.length,true);c.setUint16(28,nm.length,true);c.setUint32(42,off,true);
+cd.push(c.buffer,nm);off+=30+nm.length+d.length}
+let cl=0;cd.forEach(x=>cl+=x.byteLength);const e=new DataView(new ArrayBuffer(22));e.setUint32(0,0x06054b50,true);e.setUint16(8,files.length,true);e.setUint16(10,files.length,true);e.setUint32(12,cl,true);e.setUint32(16,off,true);
+return new Blob([...parts,...cd,e.buffer],{type:'application/zip'})}
+async function makePdf(blobs,W,H){const enc=new TextEncoder(),parts=[],offs=[];let len=0;const put=x=>{const b=typeof x==='string'?enc.encode(x):x;parts.push(b);len+=b.length},obj=k=>{offs[k]=len;put(k+' 0 obj\n')},n=blobs.length;
+put('%PDF-1.4\n');obj(1);put('<< /Type /Catalog /Pages 2 0 R >>\nendobj\n');obj(2);put('<< /Type /Pages /Kids ['+blobs.map((_,i)=>(3+3*i)+' 0 R').join(' ')+'] /Count '+n+' >>\nendobj\n');
+for(let i=0;i<n;i++){const p=3+3*i,d=new Uint8Array(await blobs[i].arrayBuffer()),cs='q '+W+' 0 0 '+H+' 0 0 cm /Im0 Do Q';
+obj(p);put('<< /Type /Page /Parent 2 0 R /MediaBox [0 0 '+W+' '+H+'] /Resources << /XObject << /Im0 '+(p+2)+' 0 R >> >> /Contents '+(p+1)+' 0 R >>\nendobj\n');
+obj(p+1);put('<< /Length '+cs.length+' >>\nstream\n'+cs+'\nendstream\nendobj\n');
+obj(p+2);put('<< /Type /XObject /Subtype /Image /Width '+W+' /Height '+H+' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length '+d.length+' >>\nstream\n');put(d);put('\nendstream\nendobj\n')}
+const xr=len,tot=3+3*n;put('xref\n0 '+tot+'\n0000000000 65535 f \n');for(let k=1;k<tot;k++)put(String(offs[k]).padStart(10,'0')+' 00000 n \n');
+put('trailer\n<< /Size '+tot+' /Root 1 0 R >>\nstartxref\n'+xr+'\n%%EOF');return new Blob(parts,{type:'application/pdf'})}
+function showImgs(bs){const o=document.createElement('div');o.id='ov';o.innerHTML='<p>Press and hold an image, then choose Save image.</p><button id="ovx">Close</button>';document.body.appendChild(o);$('ovx').onclick=()=>o.remove();bs.forEach(b=>{const r=new FileReader();r.onload=()=>{const im=document.createElement('img');im.src=r.result;o.appendChild(im)};r.readAsDataURL(b)})}
+function isMobile(){return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)||(navigator.maxTouchPoints>1&&/Mac/.test(navigator.platform))}
+function dlBlob(b,name){const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),5000)}
+async function save(name,data,imgs){try{
+if((data.type==='image/png'||data.type==='application/pdf')&&isMobile()&&navigator.canShare){const f=new File([data],name,{type:data.type});if(navigator.canShare({files:[f]})){try{await navigator.share({files:[f]});status('');return}catch(e){if(e&&e.name==='AbortError'){status('');return}}}}
+dlBlob(data,name);status('Saved '+name)}catch(e){status('');showImgs(imgs)}}
+async function imgsAll(){status('Rendering…');try{const bs=[];for(let i=0;i<S.slides.length;i++){status(`Rendering ${i+1}/${S.slides.length}…`);bs.push(await snap(i))}
+const fs=bs.map((b,i)=>new File([b],`slide-${i+1}.png`,{type:'image/png'}));
+if(isMobile()&&navigator.canShare&&navigator.canShare({files:fs})){try{await navigator.share({files:fs});status('');return}catch(e){if(e&&e.name==='AbortError'){status('');return}}}
+for(let i=0;i<bs.length;i++){dlBlob(bs[i],`slide-${i+1}.png`);await new Promise(r=>setTimeout(r,500))}
+status('Saved '+bs.length+' images')}catch(e){status('Render failed: '+e.message)}}
+async function dl(i){status('Rendering slide '+(i+1)+'…');try{const b=await snap(i);await save(`slide-${i+1}-${S.w}x${S.h}.png`,b,[b])}catch(e){status('Render failed: '+e.message)}}
+async function zipAll(){status('Rendering…');try{const fs=[],bs=[];for(let i=0;i<S.slides.length;i++){status(`Rendering ${i+1}/${S.slides.length}…`);const b=await snap(i);bs.push(b);fs.push({name:`slide-${i+1}.png`,blob:b})}
+await save(`carousel-${S.w}x${S.h}.zip`,await makeZip(fs),bs)}catch(e){status('Render failed: '+e.message)}}
+async function pdfAll(){status('Rendering…');try{const bs=[];for(let i=0;i<S.slides.length;i++){status(`Rendering ${i+1}/${S.slides.length}…`);bs.push(await snap(i,'image/jpeg',.92))}
+await save(`carousel-${S.w}x${S.h}.pdf`,await makePdf(bs,S.w,S.h),[])}catch(e){status('Render failed: '+e.message)}}
+let dp=null;addEventListener('beforeinstallprompt',e=>{e.preventDefault();dp=e});
+const isStandalone=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true,isIOS=/iPhone|iPad|iPod/i.test(navigator.userAgent)||(navigator.maxTouchPoints>1&&/Mac/.test(navigator.platform));
+if(isStandalone)$('inst').hidden=true;
+const LS=(k,v)=>{try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}};
+function hideIp(){$('ip').hidden=true}
+function snooze(){const n=+LS('cs-inst-n')||0;LS('cs-inst-n',n+1);LS('cs-inst-next',Date.now()+(n<3?1:7)*864e5)}
+function maybeInstallPopup(){if(document.getElementById('onb'))return;if(isStandalone||LS('cs-inst-done')||Date.now()<(+LS('cs-inst-next')||0))return;if(!dp&&!isIOS)return;
+if(isIOS&&!dp){$('ipd').textContent='Tap Share, then Add to Home Screen.';$('ipi').hidden=true;$('ipn').textContent='Got it'}
+$('ip').hidden=false}
+async function doInstall(){if(dp){dp.prompt();try{const r=await dp.userChoice;if(r&&r.outcome==='accepted')LS('cs-inst-done','1')}catch(e){}dp=null;hideIp()}else if(isIOS){$('ipd').textContent='Tap Share, then Add to Home Screen.';$('ip').hidden=false;$('ipi').hidden=true;$('ipn').textContent='Got it'}else checkInstall()}
+$('ipi').onclick=doInstall;$('ipn').onclick=()=>{hideIp();snooze()};
+addEventListener('appinstalled',()=>{LS('cs-inst-done','1');hideIp()});
+addEventListener('splash-done',()=>setTimeout(maybeInstallPopup,7000),{once:true});
+if(!document.getElementById('splash'))setTimeout(maybeInstallPopup,7000);
+async function checkInstall(){const r=[],ok=(t,v)=>r.push((v?'✅ ':'❌ ')+t);
+ok('Page is on https',location.protocol==='https:'||location.hostname==='localhost');
+ok('Browser supports service workers','serviceWorker' in navigator);
+for(const f of ['manifest.json','sw.js','icon-192.png','icon-512.png']){try{const x=await fetch(f,{cache:'no-store'});ok(f+' found ('+x.status+')',x.ok)}catch(e){ok(f+' found',false)}}
+try{ok('Service worker running',!!(await navigator.serviceWorker.getRegistration()))}catch(e){ok('Service worker running',false)}
+try{const x=await fetch('manifest.json',{cache:'no-store'}),t=await x.text();let m=null;try{m=JSON.parse(t)}catch(e){}
+ok('manifest.json is valid JSON (if not, your host is returning a web page instead)',!!m);
+if(m)ok('manifest has name, start_url and display standalone',!!(m.name&&m.start_url&&m.display==='standalone'))}catch(e){}
+ok('Page links the manifest',!!document.querySelector('link[rel=manifest]'));
+for(const [f,n] of [['icon-192.png',192],['icon-512.png',512]])await new Promise(res=>{const im=new Image();im.onload=()=>{ok(f+' is a real '+n+'px image',im.naturalWidth===n);res()};im.onerror=()=>{ok(f+' opens as an image',false);res()};im.src=f+'?'+Date.now()});
+ok('Chrome is offering the install prompt',!!dp);
+const o=document.createElement('div');o.id='ov';o.style.textAlign='left';
+o.innerHTML='<h3 style="color:#fff">Install check</h3>'+r.map(x=>'<p>'+x+'</p>').join('')+'<p style="opacity:.8;margin-top:16px">Any ❌ is a problem with that file. If everything above is ✅, open Chrome\'s ⋮ menu: Install app means tap it; Open app means it is already installed; Add to Home screen means tap it and choose Install in the box that appears.</p><button id="ovx">Close</button>';
+document.body.appendChild(o);$('ovx').onclick=()=>o.remove()}
+$('inst').onclick=doInstall;
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+function onSplash(fn){if(!document.getElementById('splash'))setTimeout(fn,400);else addEventListener('splash-done',()=>setTimeout(fn,400),{once:true})}
+(async function boot(){await loadState();init();ready=true;
+addEventListener('resize',()=>{place();setSheet(shS,true);renderPreview()});
+document.fonts.ready.then(()=>{FITC.clear();renderPreview()});
+if(document.fonts.addEventListener)document.fonts.addEventListener('loadingdone',()=>{FITC.clear();renderPreview()});
+saveProj();addEventListener('pagehide',saveProj);document.addEventListener('visibilitychange',()=>{if(document.hidden)saveProj()});
+if(!LS('cs-onboarded'))onSplash(()=>openOnboard(true))})();
+</script>
+</body>
+</html>
